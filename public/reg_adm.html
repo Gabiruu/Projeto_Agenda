@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./favicon.png">
+</head>
+<body>
+    <div id="box-welcome">
+        <h1 class="text-center mt-1">CADASTRO ADMINISTRADOR</h1>
+
+        <div class="box-principal">
+            <div id="form_add_adm" >
+                <div class="form-group">
+                    <label for="name_adm" class="text-muted">Nome</label>
+                    <input type="text" class="form-control" id="name_adm" aria-describedby="name_help" placeholder="Digite seu nome">
+                    <small id="name_help" class="form-text text-muted">Esse nome será usado para refenrênciar você no sistema</small>
+                </div>
+                <div class="form-group">
+                    <label for="login_adm" class="text-muted">Login</label>
+                    <input type="text" class="form-control" id="login_adm" aria-describedby="login_help" placeholder="Digite seu nome">
+                    <small id="login_help" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group">
+                    <label for="pass_adm" class="text-muted">Senha</label>
+                    <input type="password" class="form-control" id="pass_adm" aria-describedby="pass_help" placeholder="Digite a senha que deseja cadastrar">
+                    <small id="pass_help" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_pass_adm" class="text-muted">Confirmar senha</label>
+                    <input type="password" class="form-control" id="confirm_pass_adm" aria-describedby="confirm_pass_adm_help" placeholder="Confirme a senha desejada">
+                    <small id="confirm_pass_adm_help" class="form-text text-muted"></small>
+                </div>
+                <button id="btn_add_adm"  class="btn btn-primary">ENVIAR</button>
+            </form>
+        </div>
+        
+    </div>
+    
+    <script src="./reg_adm.js"></script>
+</body>
+</html>
