@@ -11,14 +11,14 @@ function showName(){
     let tlt = document.getElementById('adm_hello');
     tlt.appendChild(text);
 }
-
+/*
 var myContactss = new contact();
 var myContacts = [];
 
 function showContacts(){
     let ctt_list = document.querySelector('ul');
     ctt_list.innerHTML ='';
-    myContacts = myContactss.getContact();
+    myContacts = myContactss.getListContact();
 
     console.log(myContacts);
    
@@ -90,20 +90,10 @@ function showContacts(){
             alt_ctt(pos);
         });
         ctt_li.appendChild(btn_alt);
-
-        
-        
-        
-
     });
 }
 
-function del_ctt(pos){
-    myContacts.splice(pos, 1);
-    console.log(myContacts);
-    myContactss.setList(myContacts);
-    showContacts();
-}
+
 
 function alt_ctt(pos){
     let contato = myContacts[pos];
@@ -182,11 +172,10 @@ function alt_ctt(pos){
     btn_alt.appendChild(document.createTextNode('ALTERAR CONTATO'));
     btn_alt.setAttribute('class', 'btn btn-success');
     btn_alt.addEventListener('click', function(){
+        
+        //Verifica se o campo foi preenchido se não ele usa o placeholder para definir o valor
         let nome  = document.getElementById('ctt_input_nome').value || document.getElementById('ctt_input_nome').placeholder;
-        
-        
         let tel  = document.getElementById('ctt_input_telefone').value || document.getElementById('ctt_input_telefone').placeholder;
-        
         let email  = document.getElementById('ctt_input_email').value || document.getElementById('ctt_input_email').placeholder;
         let cep  = document.getElementById('ctt_input_cep').value || document.getElementById('ctt_input_cep').placeholder;
         let log  = document.getElementById('ctt_input_logradouro').value || document.getElementById('ctt_input_logradouro').placeholder;
@@ -201,10 +190,16 @@ function alt_ctt(pos){
     });
     id_li_ctt.appendChild(btn_alt);
 }
+*/
+window.addEventListener("load", function(){
+    showName();
+    let ctt = new contact();
+    ctt.showContacts();
+});
 
-body.addEventListener('load', showName(),showContacts());
 
-
-function saveCtt(){
-    console.log('ok mano');
-}
+btn_call_form.addEventListener('click', function(){
+    var ctt_list = document.getElementById('ctt_list');
+    let ctt = new contact();
+    ctt.renderForm(ctt_list);
+});

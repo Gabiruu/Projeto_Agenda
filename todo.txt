@@ -1,7 +1,5 @@
 ===============================  A SEREM FEITOS  ===============================
 
-- COMEÇAR A USAR GIT
-
 - Descobrir como usar o bootstrap por cnd
 
 - fazer uma função para conferir se os campos dos formulários foram preenchidos
@@ -37,3 +35,6 @@ os botões e quando o botão for clicado procurar o contato em si
 as funções dos módulos respectivos
 
 {O webpack tem uma funcionanlidade para isso}
+
+
+- COMEÇAR A USAR GIT

@@ -4,7 +4,6 @@ module.exports = {
         index: './src/index.js',
         inicio: './src/inicio.js',
         reg_adm: './src/reg_adm.js',
-        reg_contact: './src/reg_contact.js',
         agenda_home: './src/agenda_home.js'
     },
     output: {
