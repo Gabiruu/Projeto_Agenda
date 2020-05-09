@@ -145,26 +145,40 @@ export class contact{
     var listContacts = [];
     listContacts = contato.getListContact();
 
-    let ctt_list = document.querySelector('ul');
+    var ctt_list = document.querySelector('ul');
     ctt_list.innerHTML ='';
     
+    let div_accordion = document.createElement('div');
+    div_accordion.id = "accordion"
+    teste.appendChild(div_accordion); 
+    div_accordion.appendChild(ctt_list);
     //console.log(listContacts);
 
     listContacts.forEach(e => {
         let pos = listContacts.findIndex(i => i.nome === e.nome); 
-
         let btn_collapse = document.createElement('button');
+        //let ctt_li = document.querySelector('ul');
+        
 
         btn_collapse.innerHTML = e.nome;
         btn_collapse.className = 'btn btn-primary';
         btn_collapse.setAttribute('type','button');
         btn_collapse.setAttribute('data-toggle','collapse');
         btn_collapse.setAttribute('data-target','#li_'+pos );
-        btn_collapse.setAttribute('aria-expanded','false');
+        if(pos == 0){
+            btn_collapse.setAttribute('aria-expanded','true');
+        }else{
+            btn_collapse.setAttribute('aria-expanded','false');
+        }
         btn_collapse.setAttribute('aria-controls','li_'+pos );
+        let card_head = document.createElement('div');
+        card_head.id ='card_'+pos;
 
+
+
+        
         ctt_list.appendChild(btn_collapse);
-
+        
         let ctt_li = document.createElement('li');
         let ctt_p_nome = document.createElement('p');
         let ctt_p_telefone = document.createElement('p');
@@ -188,8 +202,9 @@ export class contact{
         ctt_li.appendChild(ctt_p_estado);
         ctt_li.appendChild(ctt_p_numero);
         ctt_li.className = 'list-group-item mt-2 mb-2 collapse';
+        ctt_li.setAttribute('data-parent', '#accordion');
+        ctt_li.setAttribute('aria-labelledby', 'card_'+pos);
 
-        
         ctt_p_nome.appendChild(document.createTextNode('Nome: '+e.nome));
         ctt_p_telefone.appendChild(document.createTextNode('Telefone: '+e.telefone));
         ctt_p_email.appendChild(document.createTextNode('Email: '+e.email));

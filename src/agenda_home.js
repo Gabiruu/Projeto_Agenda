@@ -191,6 +191,7 @@ function alt_ctt(pos){
     id_li_ctt.appendChild(btn_alt);
 }
 */
+
 window.addEventListener("load", function(){
     showName();
     let ctt = new contact();

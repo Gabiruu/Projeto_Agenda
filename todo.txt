@@ -23,7 +23,7 @@ adaptar o codigo
 - na página de visualização dos contatos Mostrar primeiramente só 
 os botões e quando o botão for clicado procurar o contato em si
 
-
+- Depois que clica em add ctt não tem mas como tirar o form só inseirndo o contato
 
 ===============================       FEITOS       ===============================
 
