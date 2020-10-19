@@ -1,4 +1,4 @@
-# Projeto_Agenda_JS
+# Projeto_Agenda
 
 Este é um projeto de uma agenda usando:
 
